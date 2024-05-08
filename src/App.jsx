@@ -1,11 +1,12 @@
 import './App.css';
-import userData from './userData.json';
-import friends from './friends.json';
 
 import Profile from './components/Profile/Profile';
-import FriendList from './components/FriendList/FriendList'
-// import TransactionHistory from './components/TransactionHistory/TransactionHistory'
+import FriendList from './components/FriendList/FriendList';
+import TransactionHistory from './components/TransactionHistory/TransactionHistory';
 
+import userData from './userData.json';
+import friends from './friends.json';
+import transactions from './transactions.json';
 
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
       <FriendList friends={friends} />
 
       <hr />
+
+      <TransactionHistory items={transactions} />
     </>
   );
 }
