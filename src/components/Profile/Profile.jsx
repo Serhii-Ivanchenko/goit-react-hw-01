@@ -1,7 +1,8 @@
+/* eslint-disable no-irregular-whitespace */
 import css from './Profile.module.css'
 
 function Profile( { name, tag, location, image, stats }) {
-   <div>
+   return (<div>
   <div>
     <img
       src={image}
@@ -26,7 +27,7 @@ function Profile( { name, tag, location, image, stats }) {
       <span>{stats.likes}</span>
     </li>
   </ul>
-</div>
+</div>)
  
 }
 
