@@ -1,9 +1,15 @@
+import clsx from 'clsx';
+
+import css from './FriendListItem.module.css';
+
 function FriendListItem({ data }) {
   return (
-    <div>
-      <img src={data.avatar} alt="Avatar" width="48" />
-      <p>{data.name}</p>
-      <p>{data.isOnline ? "Online" : "Offline"}</p>
+    <div className={css.card}>
+      <img className={css.avatar} src={data.avatar} alt="Avatar" width="48" />
+      <p className={css.name}>{data.name}</p>
+      <p className={clsx(css.status, data.isOnline ? css.online : css.offline)}>
+        {data.isOnline ? 'Online' : 'Offline'}
+      </p>
     </div>
   );
 }
